@@ -32,7 +32,10 @@ console.log(quotes);
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
-
+function getRandomQuote() {
+  var randomNumber = Math.floor( Math.random() * upper ) + 1;
+  return random
+}
 
 
 /***
