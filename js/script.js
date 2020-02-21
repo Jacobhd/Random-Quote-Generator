@@ -18,11 +18,29 @@ project 1 - A Random Quote Generator
 let quotes = [
   {
     citation:
-  },
-  {
+    author:
     year:
   },
-
+  {
+    citation:
+    author:
+    year:
+  },
+  {
+    citation:
+    author:
+    year:
+  },
+  {
+    citation:
+    author:
+    year:
+  },
+  {
+    citation:
+    author:
+    year:
+  }
 ];
 console.log(quotes);
 
@@ -51,7 +69,9 @@ function getRandomQuote() {
    - Set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 
-
+function printQuote() {
+  
+}
 
 
 /***
