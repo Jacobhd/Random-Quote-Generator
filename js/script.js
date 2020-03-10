@@ -17,44 +17,42 @@ project 1 - A Random Quote Generator
 // An array of quote objects to display
 let quotes = [
   {
-    quote:
-    source:
-    year:
+    quote:"We ask justice, we ask equality, we ask that all the civil and political rights that belong to citizens of the United States, be guarenteed to us and our daughters forever.",
+    source:"-Susan B. Anthony",
+    year:"1876"
   },
   {
-    quote:
-    source:
-    citation:
+    quote:"It isn't enough to talk about peace. One must believe in it. And it isn't enough to believe in it. One must work at it.",
+    source:"-Eleanore Roosevelt",
+    citation:"Voice of America broadcast (11 November 1951)"
   },
   {
-    quote:
-    source:
-    year:
+    quote:"Logic is the beginning of wisdom, not the end.",
+    source:"-Spock"
   },
   {
-    quote:
-    source:
-    year:
+    quote:"Be less curious about people and more curious about ideas",
+    source:"-Marie Curie"
   },
   {
-    quote:
-    source:
-    year:
+    quote:"Am I good enough? Yes I am",
+    source:"-Michelle Obama"
   }
 ];
-console.log(quotes);
+
 
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number
-   - Cse the random number to `return` a random quote object from the `quotes` array.
+   - Use the random number to `return` a random quote object from the `quotes` array.
 ***/
-
+// Creates randomQuote function
 function getRandomQuote() {
-  var randomNumber = Math.floor( Math.random() * upper ) + 1;
-  return random;
+  var randomQuote = Math.floor( Math.random() * quotes.length );
+//  for( let i = 0; )
+  return randomQuote;
 }
-
+console.log( getRandomQuote() );
 
 /***
   Create the `printQuote` function to:
@@ -73,7 +71,6 @@ function printQuote() {
   getRandomQuote = randomQuote();
   document.querySelector('main').innerHTML = quotes;
 }
-
 
 /***
   When the "Show another quote" button is clicked, the event listener
