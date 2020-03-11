@@ -48,9 +48,9 @@ let quotes = [
 ***/
 // Creates randomQuote function
 function getRandomQuote() {
-  var randomQuote = Math.floor( Math.random() * quotes.length );
+  var randomNumber = Math.floor( Math.random() * quotes.length );
 //  for( let i = 0; )
-  return randomQuote;
+  return randomNumber;
 }
 console.log( getRandomQuote() );
 
@@ -68,7 +68,7 @@ console.log( getRandomQuote() );
 ***/
 
 function printQuote() {
-  getRandomQuote = randomQuote();
+  getRandomQuote = randomNumber();
   document.querySelector('main').innerHTML = quotes;
 }
 
