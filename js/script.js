@@ -19,40 +19,43 @@ let quotes = [
   {
     quote:"We ask justice, we ask equality, we ask that all the civil and political rights that belong to citizens of the United States, be guarenteed to us and our daughters forever.",
     source:"-Susan B. Anthony",
-    year:"1876"
+    year:"1876",
   },
   {
     quote:"It isn't enough to talk about peace. One must believe in it. And it isn't enough to believe in it. One must work at it.",
     source:"-Eleanore Roosevelt",
-    citation:"Voice of America broadcast (11 November 1951)"
+    citation:"Voice of America broadcast (11 November 1951)",
   },
   {
     quote:"Logic is the beginning of wisdom, not the end.",
-    source:"-Spock"
+    source:"-Spock",
   },
   {
     quote:"Be less curious about people and more curious about ideas",
-    source:"-Marie Curie"
+    source:"-Marie Curie",
   },
   {
     quote:"Am I good enough? Yes I am",
-    source:"-Michelle Obama"
+    source:"-Michelle Obama",
   }
 ];
-
 
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number
    - Use the random number to `return` a random quote object from the `quotes` array.
 ***/
-// Creates randomQuote function
-function getRandomQuote() {
-  var randomNumber = Math.floor( Math.random() * quotes.length );
-//  for( let i = 0; )
-  return randomNumber;
+
+// Function pulls a random object from the quotes array index
+function getRandomQuote(array) {
+  var quoteIndex = Math.floor(Math.random() * quotes.length);
+  for (var i = 0; i < array.length; i++) {
+
+  }
+  return randomQuote;
 }
-console.log( getRandomQuote() );
+
+// console.log(randomQuote());
 
 /***
   Create the `printQuote` function to:
