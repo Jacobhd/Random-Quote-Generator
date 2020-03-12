@@ -14,12 +14,13 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
-// An array of quote objects to display
-let quotes = [
+
+// An array of quote objects to display as HTML
+const quotes = [
   {
-    quote:"We ask justice, we ask equality, we ask that all the civil and political rights that belong to citizens of the United States, be guarenteed to us and our daughters forever.",
-    source:"-Susan B. Anthony",
-    year:"1876",
+    quote:"True peace is not merely the absence of tension: it is the presence of justice.",
+    source:"-Martin Luther King Jr.",
+    year:"1955",
   },
   {
     quote:"It isn't enough to talk about peace. One must believe in it. And it isn't enough to believe in it. One must work at it.",
@@ -48,14 +49,16 @@ let quotes = [
 
 // Function pulls a random object from the quotes array index
 function getRandomQuote(array) {
-  var quoteIndex = Math.floor(Math.random() * quotes.length);
-  for (var i = 0; i < array.length; i++) {
-
+  let quoteIndex = Math.floor(Math.random() * quotes.length);
+  // Variable to store random number the length of the quotes array
+  for (let i = 0; i < array.length; i++) {
+    var randomQuote = array[quoteIndex];
   }
   return randomQuote;
 }
+let result = getRandomQuote(quotes);
 
-// console.log(randomQuote());
+console.log(result);
 
 /***
   Create the `printQuote` function to:
@@ -71,7 +74,7 @@ function getRandomQuote(array) {
 ***/
 
 function printQuote() {
-  getRandomQuote = randomNumber();
+  getRandomQuote = randomQuote();
   document.querySelector('main').innerHTML = quotes;
 }
 
