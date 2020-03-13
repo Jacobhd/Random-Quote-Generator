@@ -15,7 +15,7 @@ project 1 - A Random Quote Generator
   Use console.log() to log your array of quotes to the console.
 ***/
 
-// An array of quote objects to display as HTML
+//   An array of quote objects to display as HTML
 const quotes = [
   {
     quote:"True peace is not merely the absence of tension: it is the presence of justice.",
@@ -75,14 +75,16 @@ console.log(result);
    - Set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 
-// prints the random item into the html of the page
+//  Prints the random item into the html of the page
 function printQuote() {
   getRandomQuote = randomQuote();
+//  Conditonal statement to add the citation and year properties only if they exist
     if (randomQuote = quotes())
 
 
   document.querySelector('main').innerHTML = quotes;
 }
+//  Test
 console.log(printQuote);
 /***
   When the "Show another quote" button is clicked, the event listener
