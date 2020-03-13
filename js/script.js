@@ -47,17 +47,19 @@ const quotes = [
    - Use the random number to `return` a random quote object from the `quotes` array.
 ***/
 
-// Function pulls a random object from the quotes array index
+//  Function pulls a random object from the quotes array index
 function getRandomQuote(array) {
+/*  Stores a random number between 0 and the length of the quotes array
+    and assigns the value to the array index  */
   let quoteIndex = Math.floor(Math.random() * quotes.length);
-  // Variable to store random number the length of the quotes array
   for (let i = 0; i < array.length; i++) {
     var randomQuote = array[quoteIndex];
   }
+//  Returns the random item and stores the result
   return randomQuote;
 }
 let result = getRandomQuote(quotes);
-
+//  Test
 console.log(result);
 
 /***
@@ -73,11 +75,15 @@ console.log(result);
    - Set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 
+// prints the random item into the html of the page
 function printQuote() {
   getRandomQuote = randomQuote();
+    if (randomQuote = quotes())
+
+
   document.querySelector('main').innerHTML = quotes;
 }
-
+console.log(printQuote);
 /***
   When the "Show another quote" button is clicked, the event listener
   below will be triggered, and it will call, or "invoke", the `printQuote`
