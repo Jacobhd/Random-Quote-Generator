@@ -30,19 +30,14 @@ const quotes = [
 ];
 
 // getRandomQuote function pulls a random object from the quotes array index
-function getRandomQuote(array) {
+function getRandomQuote() {
   /*  Stores a random number between 0 and the length of the quotes array
   and assigns the value to the array index  */
   let quoteIndex = Math.floor(Math.random() * quotes.length);
-  for (let i = 0; i < array.length; i++) {
-    var randomQuote = array[quoteIndex];
-  }
-  //  Returns the random quote and stores the result
-  return randomQuote;
+  return quotes[quoteIndex];
+//  Returns the random quote and stores the result
 }
-let result = getRandomQuote(quotes);
-//  Test
-console.log(result);
+
 
 /***
   Create the `printQuote` function to:
@@ -76,6 +71,3 @@ function printQuote(message) {
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
