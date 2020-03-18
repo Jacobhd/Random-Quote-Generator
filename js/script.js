@@ -29,14 +29,13 @@ const quotes = [
   }
 ];
 
-// getRandomQuote function pulls a random object from the quotes array index
+// getRandomQuote function pulls an object from the quotes array index at random
 function getRandomQuote() {
-  /*  Stores a random number between 0 and the length of the quotes array
-  and assigns the value to the array index  */
   let quoteIndex = Math.floor(Math.random() * quotes.length);
   return quotes[quoteIndex];
 //  Returns the random quote and stores the result
 }
+
 
 
 /***
@@ -53,21 +52,18 @@ function getRandomQuote() {
 ***/
 
 
-//  Prints the random item into the html of the page
+//  Prints the random item into a message to display on the webpage
 function printQuote(message) {
   var result = getRandomQuote();
   var message = "<p class='quote'>" + result.quote + "</p>" +"<p class='source'>" + result.source + "</p>";
   document.getElementById('quote-box').innerHTML = message;
 }
-//  Conditonal statement to add the citation and year properties only if they exist
 
-//  Test console.log(printQuote);
+//  Conditonal statement to add the citation and year properties only if they exist
 
 /***
   When the "Show another quote" button is clicked, the event listener
-  below will be triggered, and it will call, or "invoke", the `printQuote`
-  function. So do not make any changes to the line of code below this
-  comment.
+  will be triggered, and it will call the `printQuote` function.
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
