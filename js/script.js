@@ -3,8 +3,9 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-// An array of object's key and value pairs to display
-const quotes = [
+
+// An array of object's key and value pairs to display from the global scope
+let quotes = [
   {
     quote:"True peace is not merely the absence of tension: it is the presence of justice.",
     source:"-Martin Luther King Jr.",
@@ -32,8 +33,7 @@ const quotes = [
 // getRandomQuote function pulls an object from the quotes array index at random
 function getRandomQuote() {
   let quoteIndex = Math.floor(Math.random() * quotes.length);
-  return quotes[quoteIndex];
-//  Returns the random quote and stores the result
+  return quotes[quoteIndex];  // Returns the random quote and stores the result
 }
 
 
@@ -52,13 +52,15 @@ function getRandomQuote() {
 ***/
 
 
-//  Prints the random item into a message to display on the webpage
+//  printQuote function prints the random item into a message on the webpage
 function printQuote(message) {
-  var result = getRandomQuote();
+  let result = getRandomQuote(); // Calls getRandomQuote function stores in result variable
   var message = "<p class='quote'>" + result.quote + "</p>" +"<p class='source'>" + result.source + "</p>";
   document.getElementById('quote-box').innerHTML = message;
 }
-
+// if ( result === citation ) {
+//  message + "<p class='citation'>" + result.citation + "</p>";
+// }
 //  Conditonal statement to add the citation and year properties only if they exist
 
 /***
