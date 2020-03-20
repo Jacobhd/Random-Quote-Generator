@@ -57,7 +57,8 @@ function printQuote(message) {
   let result = getRandomQuote(); // Calls getRandomQuote function stores in result variable
   var message = "<p class='quote'>" + result.quote + "</p>" +"<p class='source'>" + result.source + "</p>";
   document.getElementById('quote-box').innerHTML = message;
-}
+}  // Using innerHTML property to interact with the browser
+
 // if ( result === citation ) {
 //  message + "<p class='citation'>" + result.citation + "</p>";
 // }
