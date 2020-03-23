@@ -53,16 +53,25 @@ function getRandomQuote() {
 
 
 //  printQuote function prints the random item into a message on the webpage
-function printQuote(message) {
+function printQuote(message) { // message parameter
   let result = getRandomQuote(); // Calls getRandomQuote function stores in result variable
   var message = "<p class='quote'>" + result.quote + "</p>" +"<p class='source'>" + result.source + "</p>";
-  document.getElementById('quote-box').innerHTML = message;
-}  // Using innerHTML property to interact with the browser
+  document.getElementById('quote-box').innerHTML = message; // Using innerHTML property to interact with the browser
+  if ( result = quotes.citation ) {
+  return message + "<p class='citation'>" + result.citation + "</p>";
+  }
+  if ( result = quotes.year ) {
+  return message + "<p class='year'>" + result.year + "</p>";
+  }
+}
 
-// if ( result === citation ) {
-//  message + "<p class='citation'>" + result.citation + "</p>";
+//  Seperate conditonal statements to add citation and year properties, only if they exist
+
+// if ( result = getRandomQuote(year)) {
+//  return message + "<p class='year'>" + result.year + "</p>";
 // }
-//  Conditonal statement to add the citation and year properties only if they exist
+
+
 
 /***
   When the "Show another quote" button is clicked, the event listener
