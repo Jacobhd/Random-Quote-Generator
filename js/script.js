@@ -2,31 +2,26 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 // An array of object's key and value pairs to display from the global scope
 let quotes = [
   {
     quote:"True peace is not merely the absence of tension: it is the presence of justice.",
-    source:"-Martin Luther King Jr.",
-    year:"1955",
-  },
-  {
+    source:"Martin Luther King Jr.",
+    year:"1955"
+  }, {
     quote:"It isn't enough to talk about peace. One must believe in it. And it isn't enough to believe in it. One must work at it.",
-    source:"-Eleanore Roosevelt",
-    citation:"Voice of America broadcast (11 November 1951)",
-  },
-  {
+    source:"Eleanore Roosevelt",
+    citation:"Voice of America broadcast (11 November 1951)"
+  }, {
     quote:"Logic is the beginning of wisdom, not the end.",
-    source:"-Spock",
-  },
-  {
+    source:"Spock"
+  }, {
     quote:"Be less curious about people and more curious about ideas",
-    source:"-Marie Curie",
-  },
-  {
+    source:"Marie Curie"
+  }, {
     quote:"Am I good enough? Yes I am",
-    source:"-Michelle Obama",
+    source:"Michelle Obama"
   }
 ];
 
@@ -35,8 +30,6 @@ function getRandomQuote() {
   let quoteIndex = Math.floor(Math.random() * quotes.length);
   return quotes[quoteIndex];  // Returns the random quote and stores the result
 }
-
-
 
 /***
   Create the `printQuote` function to:
@@ -53,23 +46,19 @@ function getRandomQuote() {
 
 
 //  printQuote function prints the random item into a message on the webpage
+
 function printQuote(message) { // message parameter
-  let result = getRandomQuote(); // Calls getRandomQuote function stores in result variable
-  var message = "<p class='quote'>" + result.quote + "</p>" +"<p class='source'>" + result.source + "</p>";
+  let result = getRandomQuote(); // Calls 'getRandomQuote' stores in result variable
+  var message = "<p class='quote'>" + result.quote + "</p>";
+  message += "<p class='source'>" + result.source + "</p>";
+  if ( result.citation ) {
+    message += "<p class='citation'>" + result.citation + "</p>"
+  };
+  if ( result.year ) {
+    message += "<p class='year'>" + result.year + "</p>"
+  };
   document.getElementById('quote-box').innerHTML = message; // Using innerHTML property to interact with the browser
-  if ( result = quotes.citation ) {
-  return message + "<p class='citation'>" + result.citation + "</p>";
-  }
-  if ( result = quotes.year ) {
-  return message + "<p class='year'>" + result.year + "</p>";
-  }
-}
-
-//  Seperate conditonal statements to add citation and year properties, only if they exist
-
-// if ( result = getRandomQuote(year)) {
-//  return message + "<p class='year'>" + result.year + "</p>";
-// }
+};
 
 
 
