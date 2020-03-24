@@ -1,6 +1,5 @@
 /******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
+Treehouse FSJS Techdegree: project 1 - A Random Quote Generator
 ******************************************/
 
 // An array of object's key and value pairs to display from the global scope
@@ -25,34 +24,27 @@ let quotes = [
   }
 ];
 
-// getRandomQuote function pulls an object from the quotes array index at random
+// 'getRandomQuote' function pulls an object from the 'quotes' array index at random
 function getRandomQuote() {
-  let quoteIndex = Math.floor(Math.random() * quotes.length);
-  return quotes[quoteIndex];  // Returns the random quote and stores the result
+  let quoteIndex = Math.floor(Math.random() * quotes.length); // Stores random object from 'quotes' array index between [0] and [4], (the array's length)
+  return quotes[quoteIndex];  // Returns the random 'quotes' object
 }
 
-/***
-  Create the `printQuote` function to:
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND
-     the random quote vairable to build your HTML string.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string.
-***/
 
-//  printQuote function prints the random quote item into an HTML message on the webpage
-function printQuote(message) { // 'message' parameter
-  let result = getRandomQuote(); // Calls 'getRandomQuote' function stores in result variable
-  var message = "<p class='quote'>" + result.quote + "</p>"; // Creates 'message' variable with 'quote' property
-  message += "<p class='source'>" + result.source; // Adds 'source' property to HTML message
-  if ( result.citation ) { // Checks for 'citation' property, adds it to HTML message
+//  'printQuote' function prints the 'getRandomQuote' object into an HTML message displayed on the webpage
+function printQuote(message) {
+  let result = getRandomQuote(); // Calls 'getRandomQuote' function, stores in 'result' variable
+  var message = '';
+  message += "<p class='quote'>" + result.quote + "</p>"; // Creates 'message' variable, adds 'quote' property
+  message += "<p class='source'>" + result.source; // Adds 'source' property to 'message'
+  if ( result.citation ) { // Checks for 'citation' property, adds it to 'message'
     message += "<span class='citation'>" + result.citation + "</span>"
   };
-  if ( result.year ) { // Checks for 'year' property, adds it to HTML message
+  if ( result.year ) { // Checks for 'year' property, adds it to 'message'
     message += "<span class='year'>" + result.year + "</span>"
   };
   message += "</p" // Closing final 'p' tag
-  document.getElementById('quote-box').innerHTML = message; // Using innerHTML property to interact with the browser, displays HTML
+  document.getElementById('quote-box').innerHTML = message; // Using 'innerHTML' property to interact with the browser, displays HTML
 };
 
 /***
