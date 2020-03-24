@@ -50,13 +50,14 @@ function getRandomQuote() {
 function printQuote(message) { // message parameter
   let result = getRandomQuote(); // Calls 'getRandomQuote' stores in result variable
   var message = "<p class='quote'>" + result.quote + "</p>";
-  message += "<p class='source'>" + result.source + "</p>";
+  message += "<p class='source'>" + result.source;
   if ( result.citation ) {
-    message += "<p class='citation'>" + result.citation + "</p>"
+    message += "<span class='citation'>" + result.citation + "</span>"
   };
   if ( result.year ) {
-    message += "<p class='year'>" + result.year + "</p>"
+    message += "<span class='year'>" + result.year + "</span>"
   };
+  message += "</p"
   document.getElementById('quote-box').innerHTML = message; // Using innerHTML property to interact with the browser
 };
 
