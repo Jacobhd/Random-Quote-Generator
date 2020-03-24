@@ -47,7 +47,7 @@ function printQuote(message) {
     message += "<span class='year'>" + result.year + "</span>"
   };
   message += "</p"  // Closing final 'p' tag of 'message'
-  // Displays HTML 'message' using 'innerHTML' property to interact with the browser
+  // Displays HTML string 'message' using 'innerHTML' property to interact with the browser
   document.getElementById('quote-box').innerHTML = message;
 };
 
