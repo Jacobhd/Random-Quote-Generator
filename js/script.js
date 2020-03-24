@@ -2,7 +2,8 @@
 Treehouse FSJS Techdegree: project 1 - A Random Quote Generator
 ******************************************/
 
-// An array of object's key and value pairs to display from the global scope
+
+// An array of object's key and value pairs (global scope)
 let quotes = [
   {
     quote:"True peace is not merely the absence of tension: it is the presence of justice.",
@@ -24,32 +25,35 @@ let quotes = [
   }
 ];
 
-// 'getRandomQuote' function pulls an object from the 'quotes' array index at random
+
+// 'getRandomQuote' returns an object from the 'quotes' array index at random
 function getRandomQuote() {
-  let quoteIndex = Math.floor(Math.random() * quotes.length); // Stores random object from 'quotes' array index between [0] and [4], (the array's length)
-  return quotes[quoteIndex];  // Returns the random 'quotes' object
+  // 'quoteIndex' stores a random number between [0] and 'quotes' length, [4]
+  let quoteIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[quoteIndex];  // Passes 'quotes' for 'quoteIndex' to randomize and return as an object
 }
 
 
 //  'printQuote' function prints the 'getRandomQuote' object into an HTML message displayed on the webpage
 function printQuote(message) {
-  let result = getRandomQuote(); // Calls 'getRandomQuote' function, stores in 'result' variable
-  var message = '';
-  message += "<p class='quote'>" + result.quote + "</p>"; // Creates 'message' variable, adds 'quote' property
-  message += "<p class='source'>" + result.source; // Adds 'source' property to 'message'
-  if ( result.citation ) { // Checks for 'citation' property, adds it to 'message'
+  let result = getRandomQuote();  // Calls 'getRandomQuote' function, stores object in 'result' variable
+  var message = '';  // Creates 'message' variable
+  message += "<p class='quote'>" + result.quote + "</p>";  // Adds 'quote' property to 'message'
+  message += "<p class='source'>" + result.source;  // Adds 'source' property to 'message'
+  if ( result.citation ) {  // Checks for 'citation' property, adds it to 'message'
     message += "<span class='citation'>" + result.citation + "</span>"
   };
-  if ( result.year ) { // Checks for 'year' property, adds it to 'message'
+  if ( result.year ) {  // Checks for 'year' property, adds it to 'message'
     message += "<span class='year'>" + result.year + "</span>"
   };
-  message += "</p" // Closing final 'p' tag
-  document.getElementById('quote-box').innerHTML = message; // Using 'innerHTML' property to interact with the browser, displays HTML
+  message += "</p"  // Closing final 'p' tag of 'message'
+  // Displays HTML 'message' using 'innerHTML' property to interact with the browser
+  document.getElementById('quote-box').innerHTML = message;
 };
+
 
 /***
   When the "Show another quote" button is clicked, the event listener
   will be triggered, and it will call the `printQuote` function.
 ***/
-
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
