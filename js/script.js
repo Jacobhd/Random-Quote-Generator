@@ -8,7 +8,7 @@ let quotes = [
   {
     quote:"True peace is not merely the absence of tension: it is the presence of justice.",
     source:"Martin Luther King Jr",
-    year:"1955"
+    year:1955
   }, {
     quote:"It isn't enough to talk about peace. One must believe in it. And it isn't enough to believe in it. One must work at it.",
     source:"Eleanore Roosevelt",
