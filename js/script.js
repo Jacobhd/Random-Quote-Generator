@@ -34,19 +34,19 @@ function getRandomQuote() {
 }
 
 
-//  'printQuote' function prints the 'getRandomQuote' object into an HTML message displayed on the webpage
+// 'printQuote' function prints the 'getRandomQuote' object into an HTML message displayed on the webpage
 function printQuote(message) {
-  let result = getRandomQuote();  // Calls 'getRandomQuote' function, stores object in 'result' variable
-  var message = '';  // Creates 'message' variable
-  message += "<p class='quote'>" + result.quote + "</p>";  // Adds 'quote' property to 'message'
-  message += "<p class='source'>" + result.source;  // Adds 'source' property to 'message'
+  let result = getRandomQuote();
+  var message = '';
+  message += "<p class='quote'>" + result.quote + "</p>";
+  message += "<p class='source'>" + result.source;
   if ( result.citation ) {  // Checks for 'citation' property, adds it to 'message'
     message += "<span class='citation'>" + result.citation + "</span>"
   };
   if ( result.year ) {  // Checks for 'year' property, adds it to 'message'
     message += "<span class='year'>" + result.year + "</span>"
   };
-  message += "</p"  // Closing final 'p' tag of 'message'
+  message += "</p"
   // Displays HTML string 'message' using 'innerHTML' property to interact with the browser
   document.getElementById('quote-box').innerHTML = message;
 };
